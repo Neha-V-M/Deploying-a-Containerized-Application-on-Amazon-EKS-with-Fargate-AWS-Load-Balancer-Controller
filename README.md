@@ -140,7 +140,6 @@ aws configure
 ├── iam/
 │   └── iam-policy.json
 └── screenshots/
-    ├── 01-cluster-creation-terminal-1.png
     ├── 01-cluster-creation-terminal.png
     ├── 02-eks-console-cluster-active.png
     ├── 03-cluster-overview-endpoint-oidc.png
@@ -164,22 +163,21 @@ aws configure
 
 | # | Screenshot | Description |
 |---|---|---|
-| 1 | ![Cluster creation terminal](screenshots/01-cluster-creation-terminal-1.png) | Terminal output (part 1) of `eksctl create cluster` running |
-| 2 | ![Cluster creation terminal](screenshots/01-cluster-creation-terminal.png) | Terminal output of `eksctl create cluster` completing successfully |
-| 3 | ![EKS cluster active](screenshots/02-eks-console-cluster-active.png) | AWS Console → EKS → Clusters, showing the cluster with **Active** status |
-| 4 | ![Cluster overview](screenshots/03-cluster-overview-endpoint-oidc.png) | Cluster **Overview** tab showing the API server endpoint and OIDC provider URL |
-| 5 | ![Resources tab](screenshots/04-resources-tab.png) | Cluster **Resources** tab listing pods/namespaces in the console |
-| 6 | ![Fargate profile console](screenshots/05-fargate-profile-console.png) | Cluster **Compute** tab showing the Fargate profile for `game-2048` |
-| 7 | ![Fargate profile created](screenshots/06-fargate-profile-created-terminal.png) | Terminal output confirming Fargate profile creation |
-| 8 | ![Pods, service, ingress with no address](screenshots/07-pods-svc-ingress_with_no_address.png) | Pods **Running**, Service created, Ingress **ADDRESS** still empty (no controller yet) |
-| 9 | ![OIDC provider associated](screenshots/08-oidc-provider-associated.png) | Confirmation of `eksctl utils associate-iam-oidc-provider` |
-| 10 | ![IAM policy created](screenshots/09-iam-policy-created.png) | IAM Console → Policies, showing `AWSLoadBalancerControllerIAMPolicy` |
-| 11 | ![IAM service account created](screenshots/10-iam-service-account-created.png) | Terminal output of `eksctl create iamserviceaccount` succeeding |
-| 12 | ![Helm install output](screenshots/11-helm-install-output.png) | Terminal output of the Helm install succeeding |
-| 13 | ![ALB controller 2/2 ready](screenshots/12-alb-controller-2-2-ready.png) | `kubectl get deploy aws-load-balancer-controller -n kube-system` showing **2/2** ready |
-| 14 | ![ALB created in EC2 console](screenshots/13-alb-created-ec2-console.png) | EC2 Console → Load Balancers, showing the new `k8s-game2048-...` ALB (Active) |
-| 15 | ![Ingress with address](screenshots/14-ingress-with-address.png) | `kubectl get ingress -n game-2048` **after** the ALB is provisioned (ADDRESS populated) |
-| 16 | ![App live in browser](screenshots/15-app-live-in-browser.png) | The 2048 game running live at the ALB's DNS URL |
+| 1 | ![Cluster creation terminal](screenshots/01-cluster-creation-terminal.png) | Terminal output (part 1) of `eksctl create cluster` running |
+| 2 | ![EKS cluster active](screenshots/02-eks-console-cluster-active.png) | AWS Console → EKS → Clusters, showing the cluster with **Active** status |
+| 3 | ![Cluster overview](screenshots/03-cluster-overview-endpoint-oidc.png) | Cluster **Overview** tab showing the API server endpoint and OIDC provider URL |
+| 4 | ![Resources tab](screenshots/04-resources-tab.png) | Cluster **Resources** tab listing pods/namespaces in the console |
+| 5 | ![Fargate profile console](screenshots/05-fargate-profile-console.png) | Cluster **Compute** tab showing the Fargate profile for `game-2048` |
+| 6 | ![Fargate profile created](screenshots/06-fargate-profile-created-terminal.png) | Terminal output confirming Fargate profile creation |
+| 7 | ![Pods, service, ingress with no address](screenshots/07-pods-svc-ingress_with_no_address.png) | Pods **Running**, Service created, Ingress **ADDRESS** still empty (no controller yet) |
+| 8 | ![OIDC provider associated](screenshots/08-oidc-provider-associated.png) | Confirmation of `eksctl utils associate-iam-oidc-provider` |
+| 9 | ![IAM policy created](screenshots/09-iam-policy-created.png) | IAM Console → Policies, showing `AWSLoadBalancerControllerIAMPolicy` |
+| 10 | ![IAM service account created](screenshots/10-iam-service-account-created.png) | Terminal output of `eksctl create iamserviceaccount` succeeding |
+| 11 | ![Helm install output](screenshots/11-helm-install-output.png) | Terminal output of the Helm install succeeding |
+| 12 | ![ALB controller 2/2 ready](screenshots/12-alb-controller-2-2-ready.png) | `kubectl get deploy aws-load-balancer-controller -n kube-system` showing **2/2** ready |
+| 13 | ![ALB created in EC2 console](screenshots/13-alb-created-ec2-console.png) | EC2 Console → Load Balancers, showing the new `k8s-game2048-...` ALB (Active) |
+| 14 | ![Ingress with address](screenshots/14-ingress-with-address.png) | `kubectl get ingress -n game-2048` **after** the ALB is provisioned (ADDRESS populated) |
+| 15 | ![App live in browser](screenshots/15-app-live-in-browser.png) | The 2048 game running live at the ALB's DNS URL |
 ---
 
 ## 🚀 Step-by-Step Deployment Guide
