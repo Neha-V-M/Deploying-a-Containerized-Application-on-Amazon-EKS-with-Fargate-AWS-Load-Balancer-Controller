@@ -171,7 +171,7 @@ Create a `screenshots/` folder in your repo root and capture the following **18 
 
 | # | Filename | What to Capture |
 |---|---|---|
-| 1 | `01-cluster-creation-terminal.png` | Terminal output of `eksctl create cluster` completing successfully |
+| 1 | !(01-cluster-creation-terminal-1.png) | Terminal output of `eksctl create cluster` completing successfully |
 | 2 | `02-eks-console-cluster-active.png` | AWS Console → EKS → Clusters, showing your cluster with **Active** status |
 | 3 | `03-cluster-overview-endpoint-oidc.png` | Cluster **Overview** tab showing the API server endpoint and OIDC provider URL |
 | 4 | `04-resources-tab.png` | Cluster **Resources** tab listing pods/namespaces in the console |
