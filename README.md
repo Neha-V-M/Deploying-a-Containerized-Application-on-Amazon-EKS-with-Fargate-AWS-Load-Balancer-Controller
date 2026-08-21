@@ -204,8 +204,6 @@ This single command:
 
 > ⏱ Cluster creation typically takes **10–20 minutes**.
 
-📸 ![Cluster creation terminal](screenshots/01-cluster-creation-terminal-1.png)
-
 Verify in the console:
 
 📸  ![EKS cluster active](screenshots/02-eks-console-cluster-active.png) 
