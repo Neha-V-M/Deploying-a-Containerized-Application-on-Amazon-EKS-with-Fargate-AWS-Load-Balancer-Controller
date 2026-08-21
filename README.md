@@ -357,10 +357,7 @@ Open the ALB's DNS name in a browser — the 2048 game should load:
 ## 🧹 Cleanup — Avoid Unnecessary Billing
 
 ```bash
-kubectl delete -f manifests/ingress.yaml
-kubectl delete -f manifests/service.yaml
-kubectl delete -f manifests/deployment.yaml
-kubectl delete -f manifests/namespace.yaml
+kubectl apply -f manifests/2048_full.yaml
 
 helm uninstall aws-load-balancer-controller -n kube-system
 
