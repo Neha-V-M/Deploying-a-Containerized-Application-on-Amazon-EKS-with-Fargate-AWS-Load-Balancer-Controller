@@ -392,7 +392,7 @@ eksctl delete cluster --name demo-cluster-1 --region us-east-1
 - [eksctl Documentation](https://eksctl.io/)
 - [AWS Load Balancer Controller — GitHub](https://github.com/kubernetes-sigs/aws-load-balancer-controller)
 - [Kubernetes Ingress Documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-- [AWS DevOps Zero to Hero — Abhishek Veeramalla (YouTube Series)](https://www.youtube.com/@AbhishekVeeramalla)
+- [AWS DevOps Zero to Hero — Abhishek Veeramalla.]
 
 ---
 
