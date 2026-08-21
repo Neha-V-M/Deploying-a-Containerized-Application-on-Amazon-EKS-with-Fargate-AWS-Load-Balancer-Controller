@@ -136,31 +136,26 @@ aws configure
 .
 ├── README.md
 ├── manifests/
-│   ├── namespace.yaml
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── ingress.yaml
+│   └── 2048_full.yaml
 ├── iam/
 │   └── iam-policy.json
 └── screenshots/
+    ├── 01-cluster-creation-terminal-1.png
     ├── 01-cluster-creation-terminal.png
     ├── 02-eks-console-cluster-active.png
     ├── 03-cluster-overview-endpoint-oidc.png
     ├── 04-resources-tab.png
     ├── 05-fargate-profile-console.png
     ├── 06-fargate-profile-created-terminal.png
-    ├── 07-pods-running.png
-    ├── 08-service-created.png
-    ├── 09-ingress-no-address.png
-    ├── 10-oidc-provider-associated.png
-    ├── 11-iam-policy-created.png
-    ├── 12-iam-service-account-created.png
-    ├── 13-helm-install-output.png
-    ├── 14-alb-controller-2-2-ready.png
-    ├── 15-alb-created-ec2-console.png
-    ├── 16-alb-active-state.png
-    ├── 17-ingress-with-address.png
-    └── 18-app-live-in-browser.png
+    ├── 07-pods-svc-ingress_with_no_address.png
+    ├── 08-oidc-provider-associated.png
+    ├── 09-iam-policy-created.png
+    ├── 10-iam-service-account-created.png
+    ├── 11-helm-install-output.png
+    ├── 12-alb-controller-2-2-ready.png
+    ├── 13-alb-created-ec2-console.png
+    ├── 14-ingress-with-address.png
+    └── 15-app-live-in-browser.png
 ```
 
 ---
@@ -256,10 +251,7 @@ eksctl create fargateprofile \
 Apply the namespace, deployment, service, and ingress manifests (see [`manifests/`](./manifests)):
 
 ```bash
-kubectl apply -f manifests/namespace.yaml
-kubectl apply -f manifests/deployment.yaml
-kubectl apply -f manifests/service.yaml
-kubectl apply -f manifests/ingress.yaml
+kubectl apply -f manifests/2048_full.yaml
 ```
 
 Verify each resource:
