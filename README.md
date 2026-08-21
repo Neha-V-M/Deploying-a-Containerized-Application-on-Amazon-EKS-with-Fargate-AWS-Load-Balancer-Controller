@@ -163,7 +163,7 @@ aws configure
 
 | # | Screenshot | Description |
 |---|---|---|
-| 1 | ![Cluster creation terminal](screenshots/01-cluster-creation-terminal.png) | Terminal output (part 1) of `eksctl create cluster` running |
+| 1 | ![Cluster creation terminal](screenshots/01-cluster-creation-terminal.png) | Terminal output of `eksctl create cluster` running |
 | 2 | ![EKS cluster active](screenshots/02-eks-console-cluster-active.png) | AWS Console → EKS → Clusters, showing the cluster with **Active** status |
 | 3 | ![Cluster overview](screenshots/03-cluster-overview-endpoint-oidc.png) | Cluster **Overview** tab showing the API server endpoint and OIDC provider URL |
 | 4 | ![Resources tab](screenshots/04-resources-tab.png) | Cluster **Resources** tab listing pods/namespaces in the console |
