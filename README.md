@@ -21,7 +21,7 @@
 - [Tech Stack](#-tech-stack)
 - [Prerequisites](#-prerequisites)
 - [Repository Structure](#-repository-structure)
-- [Screenshots Checklist](#-screenshots-checklist-add-these-to-the-repo)
+- [Screenshots](#-screenshots-checklist-add-these-to-the-repo)
 - [Step-by-Step Deployment Guide](#-step-by-step-deployment-guide)
   - [1. Install & Configure CLI Tools](#1-install--configure-cli-tools)
   - [2. Create the EKS Cluster](#2-create-the-eks-cluster)
@@ -211,13 +211,13 @@ This single command:
 
 > ⏱ Cluster creation typically takes **10–20 minutes**.
 
-📸 *Insert `01-cluster-creation-terminal.png` here*
+📸 ![Cluster creation terminal](screenshots/01-cluster-creation-terminal-1.png)
 
 Verify in the console:
 
-📸 *Insert `02-eks-console-cluster-active.png` here*
+📸  ![EKS cluster active](screenshots/02-eks-console-cluster-active.png) 
 
-📸 *Insert `03-cluster-overview-endpoint-oidc.png` here*
+📸 ![Cluster overview](screenshots/03-cluster-overview-endpoint-oidc.png) 
 
 Update your local kubeconfig to point `kubectl` at the new cluster:
 
@@ -231,7 +231,7 @@ aws eks update-kubeconfig --name demo-cluster-1 --region us-east-1
 
 Browse pods and resources directly from the console:
 
-📸 *Insert `04-resources-tab.png` here*
+📸 ![Resources tab](screenshots/04-resources-tab.png)
 
 ---
 
@@ -247,9 +247,7 @@ eksctl create fargateprofile \
   --namespace game-2048
 ```
 
-📸 *Insert `06-fargate-profile-created-terminal.png` here*
-
-📸 *Insert `05-fargate-profile-console.png` here*
+📸 ![Fargate profile console](screenshots/05-fargate-profile-console.png)
 
 ---
 
@@ -272,11 +270,7 @@ kubectl get svc -n game-2048
 kubectl get ingress -n game-2048
 ```
 
-📸 *Insert `07-pods-running.png` here*
-
-📸 *Insert `08-service-created.png` here*
-
-📸 *Insert `09-ingress-no-address.png` here — note the ADDRESS column is empty because no Ingress Controller is installed yet*
+📸 ![Pods, service, ingress with no address](screenshots/07-pods-svc-ingress_with_no_address.png)
 
 ---
 
@@ -290,7 +284,7 @@ eksctl utils associate-iam-oidc-provider \
   --approve
 ```
 
-📸 *Insert `10-oidc-provider-associated.png` here*
+📸![OIDC provider associated](screenshots/08-oidc-provider-associated.png) 
 
 **Step 2 — Create the IAM policy:**
 
@@ -300,7 +294,7 @@ aws iam create-policy \
   --policy-document file://iam/iam-policy.json
 ```
 
-📸 *Insert `11-iam-policy-created.png` here*
+📸 ![IAM policy created](screenshots/09-iam-policy-created.png) 
 
 **Step 3 — Create an IAM role bound to a Kubernetes service account (IRSA):**
 
@@ -313,7 +307,7 @@ eksctl create iamserviceaccount \
   --approve
 ```
 
-📸 *Insert `12-iam-service-account-created.png` here*
+📸 ![IAM service account created](screenshots/10-iam-service-account-created.png)
 
 **Step 4 — Install the controller via Helm:**
 
@@ -330,16 +324,12 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   --set vpcId=<YOUR_VPC_ID>
 ```
 
-📸 *Insert `13-helm-install-output.png` here*
 
 **Step 5 — Verify the controller is healthy (2/2 ready replicas):**
 
 ```bash
 kubectl get deploy aws-load-balancer-controller -n kube-system
 ```
-
-📸 *Insert `14-alb-controller-2-2-ready.png` here*
-
 ---
 
 ### 7. Verify the Load Balancer & Access the App
@@ -348,19 +338,18 @@ Check that the Ingress now has an address:
 
 ```bash
 kubectl get ingress -n game-2048
-```
 
-📸 *Insert `17-ingress-with-address.png` here*
+📸 ![Ingress with address](screenshots/14-ingress-with-address.png)
+```
 
 Confirm the ALB in the AWS Console:
 
-📸 *Insert `15-alb-created-ec2-console.png` here*
+📸![ALB created in EC2 console](screenshots/13-alb-created-ec2-console.png) 
 
-📸 *Insert `16-alb-active-state.png` here*
 
 Open the ALB's DNS name in a browser — the 2048 game should load:
 
-📸 *Insert `18-app-live-in-browser.png` here*
+📸 ![App live in browser](screenshots/15-app-live-in-browser.png)
 
 ---
 
@@ -417,8 +406,7 @@ eksctl delete cluster --name demo-cluster-1 --region us-east-1
 
 ## 👤 Author
 
-**Neha**
-Final-year ECE student | Transitioning into Cloud Computing & Cloud Security | AWS Certified
+**Neha V M**
 
 ---
 
